@@ -5,7 +5,7 @@
   tasks:
     - name: Ensure the directory exists
       file:
-        path: /path/to/directory
+        path: /jenkins/ansible/newdirectory
         state: directory
         mode: '0755'
 
