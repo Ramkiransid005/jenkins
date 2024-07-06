@@ -10,9 +10,9 @@
 
     - name: Create a shell script with a message
       copy:
-        dest: /home/adduser/siddhu/jenkins/ansible
+        dest: /home/adduser/siddhu/jenkins/ansible/hello_world.sh
         content: |
           #!/bin/bash
           echo "Hello, World!"
-      mode: '0755'
+        mode: '0755'
 
