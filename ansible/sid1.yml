@@ -1,0 +1,18 @@
+---
+- name: Create a shell script with a message
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Ensure the directory for the script exists
+      file:
+        path: /home/adduser/siddhu/jenkins/ansible
+        state: directory
+
+    - name: Create a shell script with a message
+      copy:
+        dest: /home/adduser/siddhu/jenkins/ansible/hello_world.sh
+        content: |
+          #!/bin/bash
+          echo "Hello, World!"
+      mode: '0755'
+
