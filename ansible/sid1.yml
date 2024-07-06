@@ -10,7 +10,7 @@
 
     - name: Create a shell script with a message
       copy:
-        dest: /home/adduser/siddhu/jenkins/ansible/hello_world.sh
+        dest: /home/adduser/siddhu/jenkins/ansible
         content: |
           #!/bin/bash
           echo "Hello, World!"
