@@ -40,7 +40,7 @@
     - name: Create a symbolic link to Tomcat
       file:
         src: /opt/tomcat2/apache-tomcat-10.1.25
-        dest: /opt/tomcat2/
+        dest: /opt/tomcat2/latest/apache-tomcat-10.1.25
         state: link
 
     - name: Create a systemd service file for Tomcat
