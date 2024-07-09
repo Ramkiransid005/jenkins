@@ -21,25 +21,25 @@
 
     - name: Download Tomcat
       get_url:
-        url: https://downloads.apache.org/tomcat/tomcat-10/v10.1.19/bin/apache-tomcat-10.1.19.tar.gz
-        dest: /tmp/apache-tomcat-10.1.19.tar.gz
+        url: https://downloads.apache.org/tomcat/tomcat-10/v10.1.25/bin/apache-tomcat-10.1.25.tar.gz
+        dest: /tmp/apache-tomcat-10.1.25.tar.gz
 
     - name: Extract Tomcat
       unarchive:
-        src: /tmp/apache-tomcat-10.1.19.tar.gz
+        src: /tmp/apache-tomcat-10.1.25.tar.gz
         dest: /opt/tomcat2
         remote_src: yes
 
     - name: Change ownership of Tomcat directory
       file:
-        path: /opt/tomcat2/apache-tomcat-10.1.19
+        path: /opt/tomcat2/apache-tomcat-10.1.25
         owner: tomcat
         group: tomcat
         recurse: yes
 
     - name: Create a symbolic link to Tomcat
       file:
-        src: /opt/tomcat2/apache-tomcat-10.1.19
+        src: /opt/tomcat2/apache-tomcat-10.1.25
         dest: /opt/tomcat2/
         state: link
 
