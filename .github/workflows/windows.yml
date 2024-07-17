@@ -14,4 +14,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build with Maven
-        run: mvn -f pomx.ml clean package
+        run: mvn -f pom.xml clean package
