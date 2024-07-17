@@ -10,9 +10,8 @@ on:
 jobs:
   Build:
     name: Build
-    runs-on: [ self-hosted, surya ]
+    runs-on: [ self-hosted, siddhu ]
     steps:
       - uses: actions/checkout@v2
       - name: Build with Maven
-        run: cd /home/adduser/siddhu/jenkins/java-app/my-web-app;
-             mvn clean package
+        run: mvn -f pomx.ml clean package
