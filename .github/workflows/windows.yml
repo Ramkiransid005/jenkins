@@ -10,7 +10,7 @@ on:
 jobs:
   Build:
     name: Build
-    runs-on: [ self-hosted, siddhu ]
+    runs-on: [ self-hosted, siddu ]
     steps:
       - uses: actions/checkout@v2
       - name: Build with Maven
