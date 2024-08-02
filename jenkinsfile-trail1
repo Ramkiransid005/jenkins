@@ -4,7 +4,7 @@ pipeline{
    steps{
     script{
        sh ***
-        git([url: 'https://github.com/Ramkiransid005/jenkins.git', branch: 'main', credentialsId: 'KmoK0BefjDQDO8wb8sHDTRmft2tRw4+qZ3nl6er1oAU'])
+        git([url: 'https://github.com/Ramkiransid005/jenkins.git', branch: 'main', credentialsId: 'Chichulu@5'])
         checkout master
         ***
     }
