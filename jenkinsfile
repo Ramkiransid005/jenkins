@@ -26,18 +26,18 @@ pipeline{
               }
               } 
               }
-              stage('maven package'){
-              steps{
-                script{
-                  sh 'mvn -f java-app/my-web-app/pom.xml clean package'
+              // stage('maven package'){
+              // steps{
+              //   script{
+              //     sh 'mvn -f java-app/my-web-app/pom.xml clean package'
                 
-                }
-              }
-              }
+              //   }
+              // }
+              // }
              stage('echo'){
               steps{
                 script{
-                  sh "echo ${Branch}"
+                  sh "devops.sh"
                 
                 }
               }
