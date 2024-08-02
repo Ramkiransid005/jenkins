@@ -21,7 +21,7 @@ pipeline{
               stage('maven package'){
               steps{
                 script{
-                  sh 'mvn clean package'
+                  sh 'mvn -f java-app/my-web-app/pom.xml clean package'
                 
                 }
               }
