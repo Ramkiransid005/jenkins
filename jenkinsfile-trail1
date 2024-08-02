@@ -3,19 +3,28 @@ pipeline{
   stage('git checkout'){
    steps{
     script{
-     sh 'git([url: 'https://github.com/Ramkiransid005/jenkins.git', branch: 'main', credentialsId: 'KmoK0BefjDQDO8wb8sHDTRmft2tRw4+qZ3nl6er1oAU'])'
-     sh 'checkout master'
-    }
-   } 
-  }
-  stage('maven package'){
-   steps{
-    script{
-      sh ***
-      mvn cleanpackage
-      ***
-    }
-   }
-  }
+      checkout([
+                    $class: 'GitSCM',
+                    branches: [[name: '*/${Branch}']],
+                    extensions: [   
+                        [$class: 'CleanCheckout'],
+                        [$class: 'RelativeTargetDirectory', relativeTargetDir:'maven' ],
+                        [$class: 'CheckoutOption', timeout: 120],
+                        [$class: 'CloneOption', timeout: 120]       
+                    ],
+                    userRemoteConfigs: [[credentialsId:'Trailkey', url: 'https://github.com/Ramkiransid005/jenkins.git']]
+                    
+              ])
+              }
+              } 
+              }
+              stage('maven package'){
+              steps{
+                script{
+                  sh 'mvn clean package'
+                
+                }
+              }
+              }
  }
 }
