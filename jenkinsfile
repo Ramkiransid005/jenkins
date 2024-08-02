@@ -34,5 +34,13 @@ pipeline{
                 }
               }
               }
+             stage('echo'){
+              steps{
+                script{
+                  sh "echo ${Branch}"
+                
+                }
+              }
+              }
  }
 }
