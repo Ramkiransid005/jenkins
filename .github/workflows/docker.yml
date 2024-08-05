@@ -17,4 +17,4 @@ jobs:
         run: |
           cd /home/adduser/tomcat-docker
           docker build -t tomcat-apache .
-          docker run -d --name my-tomcat-container -p 9091:8080 my-tomcat-image
+          docker run -d --name my-tomcat-container -p 9091:8080 tomcat-apache
