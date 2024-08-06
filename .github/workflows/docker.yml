@@ -15,6 +15,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: Docker run
         run: |
-          cd /home/adduser/tomcat-docker
           docker build -t tomcat-apache .
           docker run -d --name my-tomcat-container -p 9091:8080 tomcat-apache
